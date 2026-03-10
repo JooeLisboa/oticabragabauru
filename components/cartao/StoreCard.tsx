@@ -1,12 +1,12 @@
-import Link from 'next/link';
-import { MapPin } from 'lucide-react';
-import { GlassPanel } from '@/components/ui/GlassPanel';
+import Link from "next/link";
+import { MapPin } from "lucide-react";
+import { GlassPanel } from "@/components/ui/GlassPanel";
 
 export function StoreCard({
   name,
   address,
   mapsUrl,
-  whatsappUrl
+  whatsappUrl,
 }: {
   name: string;
   address: string;
@@ -19,7 +19,9 @@ export function StoreCard({
         <MapPin className="mt-1 h-4 w-4 text-[#D5A35B]" />
         <div>
           <h3 className="text-sm font-semibold text-[#F8ECDD]">{name}</h3>
-          <p className="mt-1 text-xs leading-relaxed text-[#E9D7BE]/80">{address}</p>
+          <p className="mt-1 text-xs leading-relaxed text-[#E9D7BE]/80">
+            {address}
+          </p>
           <div className="mt-3 flex gap-2">
             <Link
               href={mapsUrl}
