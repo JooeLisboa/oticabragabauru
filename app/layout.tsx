@@ -2,9 +2,8 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Ótica Braga | Elegância, presença e visão',
-  description:
-    'Landing page premium da Ótica Braga com atendimento acolhedor, modelos sofisticados e presença de marca.'
+  title: 'Ótica Braga | Cartão Premium',
+  description: 'Cartão interativo premium da Ótica Braga para bio do Instagram.'
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

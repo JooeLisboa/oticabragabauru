@@ -1,12 +1,25 @@
+export type ActionVariant = 'primary' | 'secondary';
+
+export type QuickAction = {
+  label: string;
+  href: string;
+  variant: ActionVariant;
+  icon: 'message' | 'store' | 'instagram' | 'star' | 'phone' | 'map';
+};
+
 export const brand = {
   name: 'Ótica Braga',
-  handle: '@oticabragabauru',
-  instagram: 'https://www.instagram.com/oticabragabauru/',
+  tagline: 'Elegância, estilo e visão em cada detalhe',
+  subtitle: 'Atendimento premium, peças sofisticadas e experiência completa em Bauru.',
+  premiumBadge: 'Atendimento premium em Bauru',
+  instagramHandle: '@oticabragabauru',
+  instagramUrl: 'https://www.instagram.com/oticabragabauru/',
   whatsappDisplay: '(14) 99654-3793',
-  whatsappLink: 'https://wa.me/5514996543793',
-  headline: 'Mais que óculos. Elegância, presença e visão em cada detalhe.',
-  subheadline:
-    'Descubra modelos que unem estilo, personalidade e atendimento premium em uma experiência completa na Ótica Braga.',
+  whatsappUrl: 'https://wa.me/5514996543793',
+  phoneUrl: 'tel:+5514996543793',
+  googleRating: '5,0',
+  googleReviews: 9,
+  badges: ['5,0 no Google', '12x sem juros', '2 lojas em Bauru', '+ de 8 países atendidos'],
   highlights: [
     '+ de 8 países atendidos',
     'Em até 12x sem juros',
@@ -15,24 +28,46 @@ export const brand = {
     'Retirada na loja',
     'Entrega'
   ],
+  quickActions: [
+    { label: 'Falar no WhatsApp', href: 'https://wa.me/5514996543793', variant: 'primary', icon: 'message' },
+    { label: 'Ver lojas', href: '#lojas', variant: 'secondary', icon: 'store' },
+    { label: 'Instagram', href: 'https://www.instagram.com/oticabragabauru/', variant: 'secondary', icon: 'instagram' },
+    { label: 'Avaliações', href: '#avaliacoes', variant: 'secondary', icon: 'star' },
+    { label: 'Ligar agora', href: 'tel:+5514996543793', variant: 'secondary', icon: 'phone' },
+    { label: 'Como chegar', href: '#lojas', variant: 'secondary', icon: 'map' }
+  ] as QuickAction[],
+  reviews: [
+    'Ótimo atendimento, produtos de qualidade.',
+    'Atendimento excelente e produtos de alta qualidade.',
+    'Variedade incrível de peças com valor acessível.'
+  ],
+  stores: [
+    {
+      name: 'Ótica Braga Loja',
+      address: 'R. Bandeirantes, 9-02 - Centro, Bauru - SP, 17015-012',
+      mapsUrl:
+        'https://www.google.com/maps/search/?api=1&query=R.+Bandeirantes,+9-02+-+Centro,+Bauru+-+SP,+17015-012',
+      whatsappUrl: 'https://wa.me/5514996543793'
+    },
+    {
+      name: 'Ótica Braga Loja',
+      address: 'R. Rio Branco, 22 - 64 lj - Jardim Estoril, Bauru - SP, 17014-037',
+      mapsUrl:
+        'https://www.google.com/maps/search/?api=1&query=R.+Rio+Branco,+22+-+64+lj+-+Jardim+Estoril,+Bauru+-+SP,+17014-037',
+      whatsappUrl: 'https://wa.me/5514996543793'
+    }
+  ],
+
+  handle: '@oticabragabauru',
+  instagram: 'https://www.instagram.com/oticabragabauru/',
+  whatsappLink: 'https://wa.me/5514996543793',
+  headline: 'Mais que óculos. Elegância, presença e visão em cada detalhe.',
+  subheadline:
+    'Descubra modelos que unem estilo, personalidade e atendimento premium em uma experiência completa na Ótica Braga.',
   rating: {
     score: '5,0',
     count: '9 avaliações'
   },
-  reviews: [
-    {
-      author: 'Mariana S.',
-      text: 'Atendimento excepcional e uma variedade incrível de peças com valor acessível para todos os gostos.'
-    },
-    {
-      author: 'Fabrício P.',
-      text: 'Atendimento excelente e produtos de alta qualidade. Indico muito.'
-    },
-    {
-      author: 'Graziela M.',
-      text: 'Ótimo atendimento, produtos de qualidade.'
-    }
-  ],
   institutionalBadges: [
     'Empresa de empreendedoras',
     'Atendimento acolhedor',
