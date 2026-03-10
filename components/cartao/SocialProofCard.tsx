@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import { Star } from 'lucide-react';
-import { brand } from '@/data/brand';
-import { GlassPanel } from '@/components/ui/GlassPanel';
+import { motion } from "framer-motion";
+import { Star } from "lucide-react";
+import { brand } from "@/data/brand";
+import { GlassPanel } from "@/components/ui/GlassPanel";
 
 export function SocialProofCard() {
   return (
@@ -26,7 +26,7 @@ export function SocialProofCard() {
         </div>
         <ul className="space-y-2 text-xs text-[#E9D7BE]/90">
           {brand.reviews.map((review) => (
-            <li key={review}>“{review}”</li>
+            <div key={review.author}>{review.text}</div>
           ))}
         </ul>
       </GlassPanel>
